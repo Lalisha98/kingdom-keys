@@ -15,11 +15,11 @@ const faqCategories = [
       },
       {
         question: "What areas in South Africa do you serve?",
-        answer: "We currently serve the greater Cape Town area including the Atlantic Seaboard, Southern Suburbs, City Bowl, and surrounding regions. We also service select areas in Johannesburg and Durban for larger projects. Contact us to confirm service availability in your specific area.",
+        answer: "We serve Pretoria and Johannesburg, including areas such as Sandton, Bryanston, Fourways, Rosebank, Waterfall, Midrand, Waterkloof, Brooklyn, Menlyn, and Centurion. Contact us to confirm service availability in your specific area.",
       },
       {
         question: "What services do you offer?",
-        answer: "We offer comprehensive deep cleaning, move-in/move-out cleaning, regular maintenance cleaning (weekly, bi-weekly, monthly), post-construction cleaning, commercial property cleaning, and specialized treatments for marble, upholstery, and delicate surfaces. Each service is delivered with our signature yacht-standard approach.",
+        answer: "We offer comprehensive residential deep cleaning, move-in/move-out cleaning, regular maintenance cleaning (weekly, bi-weekly, monthly), post-construction cleaning, specialized treatments for marble, upholstery, and delicate surfaces, and professional training for domestic cleaners. Each service is delivered with our signature yacht-standard approach.",
       },
       {
         question: "Do you bring your own cleaning products and equipment?",

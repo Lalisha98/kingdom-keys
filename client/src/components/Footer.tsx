@@ -6,13 +6,14 @@ const footerLinks = {
   company: [
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
-    { href: "/reviews", label: "Client Reviews" },
-    { href: "/contact", label: "Contact" },
+    { href: "/training", label: "Training" },
+    { href: "/bookings", label: "Book Now" },
   ],
-  legal: [
+  resources: [
+    { href: "/reviews", label: "Client Reviews" },
+    { href: "/faqs", label: "FAQs" },
     { href: "/terms", label: "Terms & Conditions" },
     { href: "/privacy", label: "Privacy Policy" },
-    { href: "/faqs", label: "FAQs" },
   ],
 };
 
@@ -52,9 +53,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif font-semibold text-foreground mb-4">Legal</h4>
+            <h4 className="font-serif font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
+              {footerLinks.resources.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

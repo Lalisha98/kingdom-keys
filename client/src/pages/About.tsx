@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Anchor, Award, Users, Clock, CheckCircle, Shield, Sparkles } from "lucide-react";
 import heroImage from "@assets/generated_images/deep_cleaning_service_kitchen.png";
-import founderImage from "@assets/generated_images/professional_founder_portrait.png";
+import founderImage from "@assets/IMG_0978_1765265453654.png";
 
 const credentials = [
   { icon: Anchor, label: "Yacht-Trained", value: "Maritime Excellence" },
@@ -65,9 +65,9 @@ export default function About() {
               />
             </div>
             <div>
-              <p className="text-primary text-sm uppercase tracking-[0.2em] mb-4 font-medium">Our Founder</p>
+              <p className="text-primary text-sm uppercase tracking-[0.2em] mb-4 font-medium">Meet the Founder</p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                From Superyachts to Your Doorstep
+                Lalisha Kloppers, CEO & Founder
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                 Kingdom Keys Cleaning was born from a simple realization: the meticulous cleaning 
@@ -75,13 +75,13 @@ export default function About() {
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 After years of working aboard superyachts, where every brass fitting must gleam 
-                and every surface must be immaculate, our founder brought those exact standards 
+                and every surface must be immaculate, Lalisha brought those exact standards 
                 to South Africa's residential cleaning industry.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Today, Kingdom Keys Cleaning serves discerning clients who understand that true 
-                cleanliness isn't just about appearance—it's about the precision, technique, and 
-                care that goes into every service.
+                Today, Kingdom Keys Cleaning serves discerning clients in Pretoria and Johannesburg 
+                who understand that true cleanliness isn't just about appearance—it's about the 
+                precision, technique, and care that goes into every service.
               </p>
               <Link href="/contact">
                 <Button data-testid="button-about-contact">

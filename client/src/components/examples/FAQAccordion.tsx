@@ -12,7 +12,7 @@ const mockFAQs = [
   },
   {
     question: "What areas in South Africa do you serve?",
-    answer: "We currently serve the greater Cape Town area, including the Atlantic Seaboard, Southern Suburbs, and surrounding regions. Contact us to confirm service availability in your area.",
+    answer: "We serve Pretoria and Johannesburg, including Sandton, Bryanston, Fourways, Rosebank, Waterfall, Midrand, Waterkloof, Brooklyn, Menlyn, and Centurion. Contact us to confirm service availability in your area.",
   },
 ];
 

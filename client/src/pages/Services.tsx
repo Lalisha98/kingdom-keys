@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ServiceCard from "@/components/ServiceCard";
-import { ArrowRight, Sparkles, Home, Building, Hammer, Calendar, RefreshCw } from "lucide-react";
+import { ArrowRight, Sparkles, Home, Hammer, Calendar, RefreshCw } from "lucide-react";
 import kitchenImage from "@assets/generated_images/deep_cleaning_service_kitchen.png";
 import bathroomImage from "@assets/generated_images/luxury_bathroom_cleaning.png";
 import livingRoomImage from "@assets/generated_images/luxury_living_room_clean.png";
@@ -59,17 +59,6 @@ const services = [
     icon: Hammer,
     image: bathroomImage,
     yachtStandard: "Reveal Ready",
-  },
-  {
-    title: "Commercial Properties",
-    description: "Luxury offices, boutiques, and commercial spaces deserve the same standards as residences. We bring yacht-level care to your business environment.",
-    features: [
-      "After-hours availability",
-      "Reception and common area focus",
-      "Restroom sanitization",
-      "Desk and workspace cleaning",
-    ],
-    icon: Building,
   },
   {
     title: "Specialized Treatments",

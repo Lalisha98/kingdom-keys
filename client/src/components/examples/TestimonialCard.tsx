@@ -5,7 +5,7 @@ export default function TestimonialCardExample() {
     <div className="max-w-md">
       <TestimonialCard
         name="Sarah Mitchell"
-        location="Camps Bay, Cape Town"
+        location="Sandton, Johannesburg"
         rating={5}
         testimonial="The attention to detail is extraordinary. Having spent time on luxury yachts, I recognize true precision cleaning when I see it. Kingdom Keys delivers exactly that standard."
         service="Deep Clean"

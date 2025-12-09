@@ -6,6 +6,8 @@ import { ArrowRight, Sparkles, Home, Hammer, Calendar, RefreshCw } from "lucide-
 import kitchenImage from "@assets/generated_images/deep_cleaning_service_kitchen.png";
 import bathroomImage from "@assets/generated_images/luxury_bathroom_cleaning.png";
 import livingRoomImage from "@assets/generated_images/luxury_living_room_clean.png";
+import maintenanceImage from "@assets/generated_images/regular_home_maintenance_cleaning.png";
+import specializedImage from "@assets/generated_images/specialized_marble_treatment_service.png";
 
 // todo: remove mock functionality
 const services = [
@@ -45,6 +47,7 @@ const services = [
       "Priority scheduling",
     ],
     icon: Calendar,
+    image: maintenanceImage,
     yachtStandard: "Ongoing Care",
   },
   {
@@ -70,6 +73,8 @@ const services = [
       "Custom requests welcome",
     ],
     icon: RefreshCw,
+    image: specializedImage,
+    yachtStandard: "Expert Care",
   },
 ];
 

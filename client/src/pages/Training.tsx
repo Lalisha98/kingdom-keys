@@ -27,6 +27,7 @@ const trainingPrograms = [
   {
     title: "Foundation Training",
     duration: "1 Day",
+    price: "R1,500",
     description: "Essential cleaning techniques, product knowledge, and professional conduct for domestic cleaners.",
     features: [
       "Proper cleaning product usage",
@@ -39,6 +40,7 @@ const trainingPrograms = [
   {
     title: "Advanced Deep Clean",
     duration: "2 Days",
+    price: "R2,800",
     description: "In-depth yacht-standard methods for thorough deep cleaning of luxury residences.",
     features: [
       "White glove inspection standards",
@@ -51,6 +53,7 @@ const trainingPrograms = [
   {
     title: "Specialist Certification",
     duration: "3 Days",
+    price: "R4,200",
     description: "Comprehensive training covering specialized treatments for marble, delicate fabrics, and high-end fixtures.",
     features: [
       "Marble and stone care",
@@ -142,7 +145,10 @@ export default function Training() {
                   <div className="flex items-center gap-2 mb-2">
                     <CardTitle className="font-serif text-xl">{program.title}</CardTitle>
                   </div>
-                  <Badge variant="secondary">{program.duration}</Badge>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <Badge variant="secondary">{program.duration}</Badge>
+                    <Badge>{program.price}</Badge>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-4">{program.description}</p>
@@ -264,9 +270,9 @@ export default function Training() {
                             data-testid="select-training-program"
                           >
                             <option value="">Select a program</option>
-                            <option value="foundation">Foundation Training (1 Day)</option>
-                            <option value="advanced">Advanced Deep Clean (2 Days)</option>
-                            <option value="specialist">Specialist Certification (3 Days)</option>
+                            <option value="foundation">Foundation Training (1 Day) - R1,500</option>
+                            <option value="advanced">Advanced Deep Clean (2 Days) - R2,800</option>
+                            <option value="specialist">Specialist Certification (3 Days) - R4,200</option>
                           </select>
                         </FormControl>
                         <FormMessage />

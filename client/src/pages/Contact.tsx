@@ -8,8 +8,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@kngdomkeys.co.za",
-    href: "mailto:info@kngdomkeys.co.za",
+    value: "info@kingdomkeys.co.za",
+    href: "mailto:info@kingdomkeys.co.za",
   },
   {
     icon: Phone,
@@ -124,7 +124,7 @@ export default function Contact() {
                     Service Areas
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    We proudly serve these areas in the Western Cape:
+                    We proudly serve these areas in Gauteng:
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {serviceAreas.map((area, index) => (

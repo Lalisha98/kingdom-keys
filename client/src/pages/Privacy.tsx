@@ -121,7 +121,7 @@ export default function Privacy() {
           <p className="text-muted-foreground">
             Kingdom Keys Cleaning (Pty) Ltd<br />
             Information Officer<br />
-            Email: info@kngdomkeys.co.za<br />
+            Email: info@kingdomkeys.co.za<br />
             Website: www.kingdomkeys.co.za
           </p>
         </div>

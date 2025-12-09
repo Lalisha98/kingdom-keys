@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Anchor, Award, Users, Clock, CheckCircle, Shield, Sparkles } from "lucide-react";
 import heroImage from "@assets/generated_images/deep_cleaning_service_kitchen.png";
-import founderImage from "@assets/IMG_0978_1765265453654.png";
+import founderImage from "@assets/IMG_0978_1765266689457.jpeg";
 
 const credentials = [
   { icon: Anchor, label: "Yacht-Trained", value: "Maritime Excellence" },

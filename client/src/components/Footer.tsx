@@ -74,8 +74,8 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:info@kngdomkeys.co.za" className="hover:text-foreground transition-colors" data-testid="link-footer-email">
-                  info@kngdomkeys.co.za
+                <a href="mailto:info@kingdomkeys.co.za" className="hover:text-foreground transition-colors" data-testid="link-footer-email">
+                  info@kingdomkeys.co.za
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">

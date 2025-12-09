@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Anchor, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import logoImage from "@assets/Kingdom_Keys_Logo-Final_(High-Quality)_1765263821751.jpg";
 
 const footerLinks = {
   company: [
@@ -22,9 +23,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4" data-testid="link-footer-logo">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <Anchor className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img src={logoImage} alt="Kingdom Keys Cleaning" className="h-12 w-12 rounded-full object-cover" />
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-lg leading-tight">Kingdom Keys</span>
                 <span className="text-xs text-muted-foreground tracking-wider uppercase">Cleaning</span>
@@ -74,19 +73,19 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:info@kingdomkeys.co.za" className="hover:text-foreground transition-colors" data-testid="link-footer-email">
-                  info@kingdomkeys.co.za
+                <a href="mailto:info@kngdomkeys.co.za" className="hover:text-foreground transition-colors" data-testid="link-footer-email">
+                  info@kngdomkeys.co.za
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <a href="tel:+27000000000" className="hover:text-foreground transition-colors" data-testid="link-footer-phone">
-                  +27 (0) 00 000 0000
+                <a href="tel:+27761638193" className="hover:text-foreground transition-colors" data-testid="link-footer-phone">
+                  +27 (76) 163-8193
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Cape Town, South Africa</span>
+                <span>Pretoria & Johannesburg, South Africa</span>
               </li>
             </ul>
           </div>

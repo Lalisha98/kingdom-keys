@@ -11,21 +11,21 @@ import livingRoomImage from "@assets/generated_images/luxury_living_room_clean.p
 const testimonials = [
   {
     name: "Sarah Mitchell",
-    location: "Camps Bay, Cape Town",
+    location: "Sandton, Johannesburg",
     rating: 5,
     testimonial: "The attention to detail is extraordinary. Having spent time on luxury yachts, I recognize true precision cleaning when I see it. Kingdom Keys delivers exactly that standard.",
     service: "Deep Clean",
   },
   {
     name: "James van der Berg",
-    location: "Constantia, Cape Town",
+    location: "Waterkloof, Pretoria",
     rating: 5,
     testimonial: "After trying several cleaning services, Kingdom Keys stands apart. Their yacht-trained approach shows in every corner of my home. Absolutely impeccable.",
     service: "Move-In Clean",
   },
   {
     name: "Amanda Nkosi",
-    location: "Sandton, Johannesburg",
+    location: "Bryanston, Johannesburg",
     rating: 5,
     testimonial: "Professional, thorough, and trustworthy. They treat our home with the same care as a luxury vessel. We won't use anyone else.",
     service: "Regular Service",
@@ -217,7 +217,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold mb-2">10+</div>
+                <div className="text-4xl lg:text-5xl font-bold mb-2">5+</div>
                 <div className="text-primary-foreground/70 text-sm">Years Experience</div>
               </div>
               <div className="text-center">

@@ -8,19 +8,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@kingdomkeys.co.za",
-    href: "mailto:info@kingdomkeys.co.za",
+    value: "info@kngdomkeys.co.za",
+    href: "mailto:info@kngdomkeys.co.za",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+27 (0) 00 000 0000",
-    href: "tel:+27000000000",
+    value: "+27 (76) 163-8193",
+    href: "tel:+27761638193",
   },
   {
     icon: MapPin,
     label: "Service Area",
-    value: "Cape Town & Surrounds",
+    value: "Pretoria & Johannesburg",
   },
 ];
 
@@ -31,15 +31,16 @@ const businessHours = [
 ];
 
 const serviceAreas = [
-  "Atlantic Seaboard",
-  "City Bowl",
-  "Southern Suburbs",
-  "Constantia",
-  "Camps Bay",
-  "Clifton",
-  "Hout Bay",
-  "Franschhoek",
-  "Stellenbosch",
+  "Sandton",
+  "Bryanston",
+  "Fourways",
+  "Rosebank",
+  "Waterfall",
+  "Midrand",
+  "Waterkloof",
+  "Brooklyn",
+  "Menlyn",
+  "Centurion",
 ];
 
 export default function Contact() {

@@ -8,7 +8,7 @@ import founderImage from "@assets/generated_images/professional_founder_portrait
 
 const credentials = [
   { icon: Anchor, label: "Yacht-Trained", value: "Maritime Excellence" },
-  { icon: Award, label: "Experience", value: "10+ Years" },
+  { icon: Award, label: "Experience", value: "5+ Years" },
   { icon: Users, label: "Clients Served", value: "500+" },
   { icon: Shield, label: "Fully Insured", value: "Complete Coverage" },
 ];

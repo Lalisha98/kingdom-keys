@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, Anchor } from "lucide-react";
+import { Menu } from "lucide-react";
+import logoImage from "@assets/Kingdom_Keys_Logo-Final_(High-Quality)_1765263821751.jpg";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -22,9 +23,7 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between gap-4 h-16 lg:h-20">
           <Link href="/" className="flex items-center gap-2" data-testid="link-home-logo">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Anchor className="w-5 h-5 text-primary-foreground" />
-            </div>
+            <img src={logoImage} alt="Kingdom Keys Cleaning" className="h-12 w-12 rounded-full object-cover" />
             <div className="flex flex-col">
               <span className="font-serif font-bold text-lg leading-tight text-foreground">Kingdom Keys</span>
               <span className="text-xs text-muted-foreground tracking-wider uppercase">Cleaning</span>
@@ -62,9 +61,7 @@ export default function Navigation() {
             <SheetContent side="right" className="w-80">
               <div className="flex flex-col gap-6 mt-8">
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                    <Anchor className="w-5 h-5 text-primary-foreground" />
-                  </div>
+                  <img src={logoImage} alt="Kingdom Keys Cleaning" className="h-12 w-12 rounded-full object-cover" />
                   <div className="flex flex-col">
                     <span className="font-serif font-bold text-lg leading-tight">Kingdom Keys</span>
                     <span className="text-xs text-muted-foreground tracking-wider uppercase">Cleaning</span>

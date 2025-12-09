@@ -110,7 +110,7 @@ export default function Terms() {
           </p>
           <p className="text-muted-foreground">
             Kingdom Keys Cleaning (Pty) Ltd<br />
-            Email: info@kingdomkeys.co.za<br />
+            Email: info@kngdomkeys.co.za<br />
             Website: www.kingdomkeys.co.za
           </p>
         </div>

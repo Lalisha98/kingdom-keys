@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,7 +13,8 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, Loader2 } from "lucide-react";
+import { apiRequest } from "@/lib/queryClient";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -26,15 +28,52 @@ export default function ContactForm() {
     message: "",
   });
 
+  const sendEnquiry = useMutation({
+    mutationFn: async (data: typeof formData) => {
+      const serviceLabels: Record<string, string> = {
+        "deep-clean": "Deep Clean",
+        "move-in-out": "Move In/Out Clean",
+        "regular": "Regular Maintenance",
+        "post-construction": "Post-Construction",
+        "other": "Other",
+      };
+      const propertySizeLabels: Record<string, string> = {
+        "apartment": "Apartment (1-2 bedrooms)",
+        "house-small": "House (3-4 bedrooms)",
+        "house-large": "Large House (5+ bedrooms)",
+        "estate": "Estate / Mansion",
+        "commercial": "Commercial Property",
+      };
+      
+      const fullMessage = `${data.message}${data.propertySize ? `\n\nProperty Size: ${propertySizeLabels[data.propertySize] || data.propertySize}` : ''}`;
+      
+      return apiRequest("POST", "/api/contact", {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        service: serviceLabels[data.service] || data.service,
+        message: fullMessage,
+      });
+    },
+    onSuccess: () => {
+      setIsSubmitted(true);
+      toast({
+        title: "Enquiry Sent",
+        description: "We'll get back to you within 24 hours.",
+      });
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Failed to Send",
+        description: error.message || "Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+    },
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // todo: remove mock functionality - implement actual form submission
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    toast({
-      title: "Enquiry Received",
-      description: "We'll get back to you within 24 hours.",
-    });
+    sendEnquiry.mutate(formData);
   };
 
   const handleChange = (field: string, value: string) => {
@@ -174,9 +213,18 @@ export default function ContactForm() {
             />
           </div>
 
-          <Button type="submit" className="w-full" data-testid="button-submit-form">
-            <Send className="w-4 h-4 mr-2" />
-            Send Enquiry
+          <Button type="submit" className="w-full" disabled={sendEnquiry.isPending} data-testid="button-submit-form">
+            {sendEnquiry.isPending ? (
+              <>
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                <Send className="w-4 h-4 mr-2" />
+                Send Enquiry
+              </>
+            )}
           </Button>
         </form>
       </CardContent>

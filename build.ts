@@ -1,7 +1,31 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
 import { rm, readFile } from "fs/promises";
+async function runBuild() {
+  // Optional: clean previous build
+  try {
+    await rm("dist", { recursive: true });
+  } catch {}
 
+  // Run esbuild (optional, if your project uses it)
+  await esbuild({
+    entryPoints: ["index.ts"], // change if your main file is different
+    bundle: true,
+    outdir: "dist",
+    minify: true,
+    sourcemap: false,
+  });
+
+  // Run Vite build
+  await viteBuild({
+    build: {
+      outDir: "dist",
+      emptyOutDir: true,
+    },
+  });
+}
+
+runBuild();
 // server deps to bundle to reduce openat(2) syscalls
 // which helps cold start times
 const allowlist = [

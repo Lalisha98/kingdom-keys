@@ -215,14 +215,10 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-4xl lg:text-5xl font-bold mb-2">5+</div>
                 <div className="text-primary-foreground/70 text-sm">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold mb-2">500+</div>
-                <div className="text-primary-foreground/70 text-sm">Happy Clients</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl lg:text-5xl font-bold mb-2">100%</div>

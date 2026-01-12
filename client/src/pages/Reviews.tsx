@@ -16,7 +16,7 @@ const reviews = [
   {
     name: "James van der Berg",
     location: "Waterkloof, Pretoria",
-    rating: 5,
+    rating: 4,
     testimonial: "After trying several cleaning services, Kingdom Keys stands apart. Their yacht-trained approach shows in every corner of my home. The team is professional, thorough, and treats our home with genuine care.",
     service: "Move-In Clean",
   },
@@ -30,7 +30,7 @@ const reviews = [
   {
     name: "Michael Thompson",
     location: "Menlyn, Pretoria",
-    rating: 5,
+    rating: 4,
     testimonial: "We had our new build cleaned before moving in and the results were outstanding. Every window sparkled, every fixture gleamed. Kingdom Keys understood exactly what we needed.",
     service: "Post-Construction",
   },
@@ -51,7 +51,7 @@ const reviews = [
   {
     name: "Nomsa Dlamini",
     location: "Waterfall Estate, Midrand",
-    rating: 5,
+    rating: 4,
     testimonial: "Moving into our new home was stressful enough. Kingdom Keys took the cleaning completely off our plate and delivered beyond expectations. Professional, efficient, and exceptional.",
     service: "Move-In Clean",
   },
@@ -65,7 +65,7 @@ const reviews = [
   {
     name: "Catherine Williams",
     location: "Centurion, Pretoria",
-    rating: 5,
+    rating: 4,
     testimonial: "Our marble floors and delicate fixtures needed special care. Kingdom Keys not only understood but exceeded our expectations. They use the right products and techniques for luxury finishes.",
     service: "Specialized Treatment",
   },

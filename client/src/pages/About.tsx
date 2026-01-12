@@ -9,8 +9,8 @@ import founderImage from "@assets/IMG_0978_1765266689457.jpeg";
 const credentials = [
   { icon: Anchor, label: "Yacht-Trained", value: "Maritime Excellence" },
   { icon: Award, label: "Experience", value: "5+ Years" },
-  { icon: Users, label: "Clients Served", value: "500+" },
   { icon: Shield, label: "Fully Insured", value: "Complete Coverage" },
+  { icon: Clock, label: "Response Time", value: "Within 24 Hours" },
 ];
 
 const values = [

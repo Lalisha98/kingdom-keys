@@ -43,7 +43,7 @@ async function build() {
     await viteBuild({
       build: {
         outDir: "dist",
-        emptyOutDir: true,
+        emptyOutDir: false,
       },
     });
 
@@ -61,7 +61,7 @@ async function build() {
       bundle: true,
       platform: "node",
       format: "cjs",
-      outfile: "dist/index.cjs",
+      outfile: "dist/server/index.cjs",
       external: externals,
       minify: true,
       define: {

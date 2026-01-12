@@ -1,5 +1,4 @@
 [build]
-  # Use your node build script
   command = "npm run build"
 
   # Folder to publish after build
@@ -13,3 +12,4 @@
 #  from = "/*"
 #  to = "/index.html"
 #  status = 200
+

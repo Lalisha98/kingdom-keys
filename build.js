@@ -3,51 +3,35 @@ import { build as viteBuild } from "vite";
 import { build as esbuild } from "esbuild";
 import { rm, readFile } from "fs/promises";
 
-// List of dependencies to keep external for server build
 const allowlist = [
   "@google/generative-ai",
   "axios",
-  "connect-pg-simple",
-  "cors",
-  "date-fns",
-  "drizzle-orm",
-  "drizzle-zod",
   "express",
-  "express-rate-limit",
-  "express-session",
-  "jsonwebtoken",
-  "memorystore",
-  "multer",
-  "nanoid",
-  "nodemailer",
-  "openai",
-  "passport",
-  "passport-local",
+  "cors",
   "pg",
   "stripe",
+  "jsonwebtoken",
   "uuid",
-  "ws",
-  "xlsx",
-  "zod",
-  "zod-validation-error",
+  "nanoid",
+  // add other server deps as needed
 ];
 
 async function build() {
   try {
-    // 1️⃣ Remove old dist folder
+    // Remove old dist
     await rm("dist", { recursive: true, force: true });
     console.log("Old dist/ folder cleared.");
 
-    // 2️⃣ Build client with Vite
+    // Build client (Vite) → put directly into dist
     console.log("Building client with Vite...");
     await viteBuild({
       build: {
         outDir: "dist",
-        emptyOutDir: false,
+        emptyOutDir: true,
       },
     });
 
-    // 3️⃣ Build server with esbuild
+    // Build server (esbuild) → output to dist/server
     console.log("Building server with esbuild...");
     const pkg = JSON.parse(await readFile("package.json", "utf-8"));
     const allDeps = [
@@ -57,7 +41,7 @@ async function build() {
     const externals = allDeps.filter((dep) => !allowlist.includes(dep));
 
     await esbuild({
-      entryPoints: ["server/index.ts"], // update if server file is elsewhere
+      entryPoints: ["server/index.ts"],
       bundle: true,
       platform: "node",
       format: "cjs",
@@ -70,12 +54,12 @@ async function build() {
       logLevel: "info",
     });
 
-    console.log("✅ Build complete! Dist folder created.");
+    console.log("✅ Build complete! Dist folder ready for Netlify.");
   } catch (err) {
     console.error("❌ Build failed:", err);
     process.exit(1);
   }
 }
 
-// Run the build
 build();
+

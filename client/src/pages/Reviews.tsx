@@ -89,9 +89,15 @@ export default function Reviews() {
             </p>
             <div className="flex items-center justify-center gap-2">
               <div className="flex items-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-yellow-500" />
-                ))}
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const fillClass =
+                    i + 1 <= Math.floor(averageRating)
+                      ? "text-yellow-500 fill-yellow-500"
+                      : i < averageRating
+                      ? "text-yellow-500 fill-yellow-300"
+                      : "text-muted-foreground";
+                  return <Star key={i} className={`w-6 h-6 ${fillClass}`} />;
+                })}
               </div>
               <span className="text-foreground font-semibold">{averageRating.toFixed(1)}</span>
               <span className="text-muted-foreground">from {reviews.length} reviews</span>
